@@ -2,5 +2,8 @@
 
 - martial-ui
 - react router dom
-- react router dom
-- react router dom
+- redux
+- react-redux
+- redux-devtools
+- redux-thunk
+- redux-persist
