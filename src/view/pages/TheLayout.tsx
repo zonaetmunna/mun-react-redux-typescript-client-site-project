@@ -1,12 +1,15 @@
-import React from 'react';
-import Footer from '../components/common/Footer';
-import Header from '../components/common/Header';
+import React, { Suspense } from 'react';
+// import Home from './home/Home';
+
+const Home=React.lazy(()=>import('./home/Home'));
 
 const TheLayout = () => {
      return (
           <div>
-               <Header></Header>
-               <Footer></Footer>
+               <Suspense fallback={<div>Loading...</div>}>
+                    <Home></Home>
+               </Suspense>
+               
           </div>
      );
 };

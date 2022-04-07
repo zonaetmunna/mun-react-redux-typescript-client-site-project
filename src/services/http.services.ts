@@ -18,4 +18,6 @@ class Request{
 
 }
 
-export default new Request();
+const httpReq=new Request()
+
+export default httpReq;

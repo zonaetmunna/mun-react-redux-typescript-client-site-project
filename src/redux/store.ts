@@ -3,6 +3,8 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import cartReducer from "./reducers/cartReducer";
 import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+import authReducer from "./reducers/authReducer";
 
 
 
@@ -13,7 +15,7 @@ const persistConfig = {
 
 const rootReducers=combineReducers({
      cart:cartReducer,
-     //auth: authReducers
+     auth:authReducer
 })
 
 

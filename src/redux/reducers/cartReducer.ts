@@ -4,10 +4,10 @@ import { cartActionType, cartActionTypes } from './../types';
 const cartReducer=(state:iProducts[]=[],action:cartActionType)=>{
      switch (action.type) {
           case cartActionTypes.ADD_TO_CART:
-               return [...state,]
+               return [...state,action.payLoad]
      
           case cartActionTypes.REMOVE_FROM_CART:
-               return state.filter(item=>item._id!==action.payLoad.id)
+               return state.filter(item=>item._id!==action.payLoad)
           case cartActionTypes.CLEAR_CART:
                return []
           default:
